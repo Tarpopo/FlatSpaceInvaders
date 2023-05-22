@@ -10,10 +10,10 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private EnemyType _enemyType;
     public event Action OnTakeDamage;
 
-    private void Start()
-    {
-        Shoot();
-    }
+    // private void Start()
+    // {
+    //     Shoot();
+    // }
 
     public void TakeDamage(int damage)
     {
