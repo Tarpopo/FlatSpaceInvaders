@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private EnemyPool _enemyPool;
     [SerializeField] private ParticlesPool _particlesPool;
     [SerializeField] private EnemyType _enemyType;
-    public event Action OnTakeDamage;
 
     public void TakeDamage(int damage)
     {

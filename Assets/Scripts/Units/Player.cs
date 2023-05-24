@@ -1,11 +1,9 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour, IDamageable
 {
-    public event Action OnTakeDamage;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerData _playerData;
     [SerializeField] private Weapon _weapon;
@@ -13,7 +11,6 @@ public class Player : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        OnTakeDamage?.Invoke();
         _playerData.OnPlayerTakeDamage.Invoke();
         CameraShaker.DoHardShake();
         _playerData.ParticlesPool.Get().SetParticle(transform.position, ParticlesAnimations.Explosion);

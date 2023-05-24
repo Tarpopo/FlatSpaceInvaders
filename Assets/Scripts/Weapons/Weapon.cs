@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _scaleAnimation;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private float _shootDelay;
-    [SerializeField] private BulletPool _bulletPool;
+    [SerializeField] private BaseBulletPool _bulletPool;
     [SerializeField] private Vector2 _shootDirection;
     [SerializeField, Tag] private string[] _ignoreTags;
     private readonly Timer _timer = new Timer();

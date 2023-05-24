@@ -10,7 +10,7 @@ public class EnemyWeapon
     [SerializeField] private float _scaleAnimationDuration;
     [SerializeField] private float _scaleAnimation;
     [SerializeField] private Transform _shootPoint;
-    [SerializeField] private BulletPool _bulletPool;
+    [SerializeField] private BaseBulletPool _bulletPool;
     [SerializeField] private Vector2 _shootDirection;
     [SerializeField, Tag] private string[] _ignoreTags;
 

@@ -417,7 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjects:
-  - {fileID: 11400000, guid: 9229547608cfa344f98577b69384468a, type: 2}
+  - {fileID: 11400000, guid: 91d91e48d8a965140ae3141ea8a34b10, type: 2}
+  - {fileID: 11400000, guid: 62cc33f6e1c2c614cb1c5d3b71f5fbee, type: 2}
   - {fileID: 11400000, guid: c106473961dd25743b587ac61afab025, type: 2}
   - {fileID: 11400000, guid: 36a7919c16b3b58419c7c7c39450b40c, type: 2}
 --- !u!1 &210940130
@@ -571,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8014107202033082867, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
+      propertyPath: _enemyWeapon._bulletPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 62cc33f6e1c2c614cb1c5d3b71f5fbee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
 --- !u!4 &216845279 stripped
@@ -2434,6 +2439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8014107202033082867, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
+      propertyPath: _enemyWeapon._bulletPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 62cc33f6e1c2c614cb1c5d3b71f5fbee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
 --- !u!4 &1013739083 stripped
@@ -3635,6 +3644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8014107202033082867, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
+      propertyPath: _enemyWeapon._bulletPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 62cc33f6e1c2c614cb1c5d3b71f5fbee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
 --- !u!4 &1466703441 stripped
@@ -4161,6 +4174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8014107202033082867, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
+      propertyPath: _enemyWeapon._bulletPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 62cc33f6e1c2c614cb1c5d3b71f5fbee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
 --- !u!4 &1845310660 stripped
@@ -4354,5 +4371,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8014107202033082867, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}
+      propertyPath: _enemyWeapon._bulletPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 62cc33f6e1c2c614cb1c5d3b71f5fbee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f74efb7ce60fd439f699c7a80de501, type: 3}

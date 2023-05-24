@@ -283,7 +283,7 @@ MonoBehaviour:
   _scaleAnimation: 0.3
   _shootPoint: {fileID: 1112842105529137523}
   _shootDelay: 0.4
-  _bulletPool: {fileID: 11400000, guid: 9229547608cfa344f98577b69384468a, type: 2}
+  _bulletPool: {fileID: 11400000, guid: 91d91e48d8a965140ae3141ea8a34b10, type: 2}
   _shootDirection: {x: 0, y: 1}
   _ignoreTags:
   - FreeBulletWall
