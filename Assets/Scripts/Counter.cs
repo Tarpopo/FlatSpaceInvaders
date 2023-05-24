@@ -13,8 +13,8 @@ public class Counter
 
     public void ReduceValue()
     {
-        if (_value <= 0) return;
+        if (_value < 0) return;
         _value--;
-        if (_value <= 0) _onCountEnded?.Invoke();
+        if (_value < 0) _onCountEnded?.Invoke();
     }
 }

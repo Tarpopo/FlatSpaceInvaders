@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f11e447b8077478f4242101e72f42, type: 3}
   m_Name: Player Data
   m_EditorClassIdentifier: 
+  ParticlesPool: {fileID: 11400000, guid: 36a7919c16b3b58419c7c7c39450b40c, type: 2}
   OnPlayerDead: {fileID: 11400000, guid: 97380742af9867f4f9ed1091de85014a, type: 2}
   OnPlayerTakeDamage: {fileID: 11400000, guid: c9ed88578d03a2c43ae563f6322208f2, type: 2}
-  MoveSpeed: 0.1
+  MoveSpeed: 0.2

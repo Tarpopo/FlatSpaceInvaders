@@ -11,29 +11,36 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] private Weapon _weapon;
     private IMove _rigidbodyMove;
 
-    private void Awake() => _rigidbodyMove = new RigidbodyMove(GetComponent<Rigidbody2D>());
+    public void TakeDamage(int damage)
+    {
+        OnTakeDamage?.Invoke();
+        _playerData.OnPlayerTakeDamage.Invoke();
+        CameraShaker.DoHardShake();
+        _playerData.ParticlesPool.Get().SetParticle(transform.position, ParticlesAnimations.Explosion);
+        gameObject.Disable();
+    }
 
+    private void Awake() => _rigidbodyMove = new RigidbodyMove(GetComponent<Rigidbody2D>());
 
     private void OnEnable()
     {
         _playerInput.OnMove += Move;
         _playerInput.OnShoot += Shoot;
+        _playerData.OnPlayerDead.Subscribe(OnDead);
+        _playerData.ParticlesPool.Get().SetParticle(transform.position, ParticlesAnimations.Circles);
     }
 
     private void OnDisable()
     {
         _playerInput.OnMove -= Move;
         _playerInput.OnShoot -= Shoot;
+        _playerData.OnPlayerDead.Unsubscribe(OnDead);
     }
 
     private void Move(Vector2 moveDirection) => _rigidbodyMove.Move(moveDirection, _playerData.MoveSpeed);
 
     private void Shoot() => _weapon.TryShoot();
 
-    public void TakeDamage(int damage)
-    {
-        OnTakeDamage?.Invoke();
-        _playerData.OnPlayerTakeDamage.Invoke();
-        print("im take damage");
-    }
+    private void OnDead() =>
+        _playerData.ParticlesPool.Get().SetParticle(transform.position, ParticlesAnimations.Circles);
 }

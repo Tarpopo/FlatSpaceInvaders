@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,5 +22,11 @@ public static class Helpers
         if (_waitDictionary.TryGetValue(time, out var wait)) return wait;
         _waitDictionary[time] = new WaitForSeconds(time);
         return _waitDictionary[time];
+    }
+
+    public static IEnumerator WaitRoutine(this float delayTime, Action onComplete)
+    {
+        yield return GetWait(delayTime);
+        onComplete?.Invoke();
     }
 }

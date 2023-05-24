@@ -8,10 +8,7 @@ public class PlayerLives : MonoBehaviour
     [SerializeField] private OnPlayerDead _onPlayerDead;
     private readonly Stack<GameObject> _activeLives = new Stack<GameObject>(4);
 
-    private void Start()
-    {
-        RestoreLives();
-    }
+    private void Start() => RestoreLives();
 
     private void OnEnable() => _playerTakeDamage.Subscribe(ReduceLive);
 
@@ -21,7 +18,9 @@ public class PlayerLives : MonoBehaviour
     {
         if (_activeLives.TryPop(out var live) == false) return;
         live.Disable();
-        if (_activeLives.Count <= 0) _onPlayerDead.Invoke();
+        if (_activeLives.Count > 0) return;
+        _onPlayerDead.Invoke();
+        RestoreLives();
     }
 
     private void RestoreLives()
